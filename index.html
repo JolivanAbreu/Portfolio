@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-PT" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -44,16 +44,18 @@
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
       }
-      /* Gradiente Executivo: Azul Clássico para Safira e Cyan Escuro */
+      /* Gradiente Executivo: Azul Clássico para Safira e Cyan Escuro com correções para Mobile (iOS/Safari) */
       .gradient-text {
         background: linear-gradient(
           135deg,
           #3b82f6 0%,
           #1d4ed8 50%,
-          #06b6d4 100__
+          #06b6d4 100%
         );
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
+        display: inline-block; /* Resolve o bug de renderização invisível em ecrãs mobile */
       }
       .gradient-glow {
         box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.15);
@@ -221,22 +223,25 @@
               <h3
                 class="text-xs font-extrabold uppercase tracking-wider text-slate-400"
               >
-                Backend
+                Backend & Bases de Dados
               </h3>
             </div>
             <ul class="space-y-2">
               <li class="flex items-center gap-2 text-sm text-slate-300">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                Node.js (Express / Sequelize)
+                Node.js (Sequelize) | Java | PHP | C#
               </li>
               <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Java
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> SQL
+                (MariaDB, PostgreSQL, SQLite)
               </li>
               <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> PHP
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                Modelagem Entidade-Relacionamento
               </li>
               <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> C#
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> APIs
+                RESTful & Docker Integration
               </li>
             </ul>
           </div>
@@ -486,10 +491,30 @@
               >Jornada</span
             >
             <h2 class="text-2xl font-extrabold tracking-tight mt-1">
-              Formação Técnica
+              Formação Técnica & Acadêmica
             </h2>
           </div>
           <div class="border-l-2 border-slate-800 ml-4 pl-6 space-y-8">
+            <!-- Unifametro -->
+            <div class="relative">
+              <div
+                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-blue-500"
+              ></div>
+              <span class="text-xs text-slate-500 font-mono"
+                >Concluído em Junho de 2026</span
+              >
+              <h3 class="text-base font-bold text-slate-200 mt-1">
+                Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS)
+              </h3>
+              <p class="text-xs text-blue-400 font-semibold">Unifametro</p>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                Formação com foco prático em engenharia de requisitos,
+                arquitetura de sistemas e implementação de soluções com foco em
+                alta escalabilidade.
+              </p>
+            </div>
+
+            <!-- SENAI -->
             <div class="relative">
               <div
                 class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-blue-500"
@@ -538,6 +563,24 @@
               <p class="text-[11px] text-slate-500">
                 Competências adquiridas: Cibersegurança, Análise e Mitigação de
                 Riscos em Redes.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-cyan-500"
+              ></div>
+              <span class="text-xs text-slate-500 font-mono"
+                >Outubro de 2025</span
+              >
+              <h3 class="text-sm font-bold text-slate-200 mt-1">
+                Bootcamp Santander Cibersegurança 2025
+              </h3>
+              <p class="text-xs text-cyan-400 font-semibold">DIO</p>
+              <p class="text-[11px] text-slate-500">
+                Competências: Práticas de segurança ofensiva e defensiva
+                (Pentest), análise de vulnerabilidades, simulação de ataques
+                digitais e técnicas de pós-exploração.
               </p>
             </div>
 
