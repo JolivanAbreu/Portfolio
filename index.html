@@ -1,722 +1,1029 @@
 <!doctype html>
-<html lang="pt-PT" class="scroll-smooth">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jolivan Abreu Teixeira | Portfólio Profissional</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jolivan Abreu · Desenvolvedor Full-Stack</title>
+    <meta
+      name="description"
+      content="Jolivan Abreu, desenvolvedor full-stack em Fortaleza. Sistemas web com Node.js e React em produção: agendamento, e-commerce e comandas para pequenos negócios."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jolivan Abreu · Desenvolvedor Full-Stack" />
+    <meta
+      property="og:description"
+      content="Sistemas web com Node.js e React em produção para pequenos negócios: agendamento, e-commerce e comandas."
+    />
+    <meta property="og:url" content="https://jolivanabreu.github.io/Portfolio/" />
+    <meta name="theme-color" content="#0f2a3a" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2a3a'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='30' fill='%23f2b33d'%3EJA%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50: "#f0f7ff",
-                100: "#e0effe",
-                200: "#bae2fd",
-                300: "#7dd0fc",
-                400: "#38bdf8",
-                500: "#0ea5e9",
-                600: "#0284c7",
-                700: "#0369a1",
-                800: "#075985",
-                900: "#0c4a6e",
-                950: "#082f49",
-              },
-            },
-            fontFamily: {
-              sans: ["Plus Jakarta Sans", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
     <style>
+      :root {
+        --bg: #f6f8fa;
+        --surface: #ffffff;
+        --ink: #0f2a3a;
+        --text: #1d3342;
+        --muted: #5a6b78;
+        --line: #d9e0e6;
+        --sea: #0d7480;
+        --sea-soft: #e1f1f2;
+        --sun: #f2b33d;
+        --sun-ink: #6b4500;
+        --sun-soft: #fdf1d8;
+        --focus: #0d7480;
+        --radius-lg: 20px;
+        --radius-sm: 8px;
+        --shadow: 0 1px 2px rgba(15, 42, 58, 0.06), 0 8px 24px -12px rgba(15, 42, 58, 0.18);
+        --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+        --body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1c27;
+          --surface: #10242f;
+          --ink: #eef4f7;
+          --text: #d3dee5;
+          --muted: #93a5b1;
+          --line: #1f3a49;
+          --sea: #4cc3cd;
+          --sea-soft: #12343d;
+          --sun: #f2b33d;
+          --sun-ink: #f6c76a;
+          --sun-soft: #2d2613;
+          --focus: #4cc3cd;
+          --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px -16px rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
       body {
-        font-family: "Plus Jakarta Sans", sans-serif;
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--body);
+        font-size: 1rem;
+        line-height: 1.6;
       }
-      .gradient-text {
-        background: linear-gradient(
-          135deg,
-          #3b82f6 0%,
-          #1d4ed8 50%,
-          #06b6d4 100%
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
+      img {
+        max-width: 100%;
+        display: block;
       }
-      .gradient-glow {
-        box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.15);
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--display);
+        color: var(--ink);
+        margin: 0;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 0;
+      }
+      .wrap {
+        width: min(1120px, 100% - 32px);
+        margin-inline: auto;
+      }
+      .skip {
+        position: absolute;
+        left: -999px;
+        top: 8px;
+        background: var(--ink);
+        color: var(--bg);
+        padding: 8px 12px;
+        border-radius: var(--radius-sm);
+        z-index: 100;
+      }
+      .skip:focus {
+        left: 16px;
+      }
+
+      /* Header */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: saturate(160%) blur(10px);
+        -webkit-backdrop-filter: saturate(160%) blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .site-header .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        height: 64px;
+      }
+      .brand {
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 1.15rem;
+        color: var(--ink);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+      }
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+        border-radius: 9px;
+        background: var(--ink);
+        color: var(--sun);
+        display: grid;
+        place-items: center;
+        font-size: 0.8rem;
+        letter-spacing: 0;
+      }
+      .nav {
+        display: flex;
+        gap: 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+      .nav a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 8px 12px;
+        border-radius: var(--radius-sm);
+        white-space: nowrap;
+      }
+      .nav a:hover {
+        color: var(--ink);
+        background: var(--sea-soft);
+      }
+      @media (max-width: 560px) {
+        .brand-name {
+          display: none;
+        }
+        .nav a {
+          padding: 8px 9px;
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        border: 1.5px solid var(--line);
+        background: var(--surface);
+        color: var(--ink);
+        transition: border-color 0.15s, background-color 0.15s;
+      }
+      .btn:hover {
+        border-color: var(--ink);
+      }
+      .btn svg {
+        width: 18px;
+        height: 18px;
+        flex: none;
+      }
+      .btn-primary {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: var(--bg);
+      }
+      .btn-primary:hover {
+        background: var(--sea);
+        border-color: var(--sea);
+      }
+
+      /* Hero */
+      .hero {
+        padding: 72px 0 56px;
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 48px;
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 6.5vw, 4.75rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.035em;
+      }
+      .role {
+        margin-top: 16px;
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+        color: var(--sea);
+      }
+      .lede {
+        margin-top: 20px;
+        max-width: 58ch;
+        font-size: 1.1rem;
+        color: var(--text);
+      }
+      .hero-actions {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .status {
+        margin-top: 28px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      .status::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #1fa463;
+        box-shadow: 0 0 0 4px color-mix(in srgb, #1fa463 22%, transparent);
+      }
+      .portrait {
+        width: clamp(170px, 24vw, 260px);
+        aspect-ratio: 4 / 5;
+        border-radius: 130px 130px var(--radius-lg) var(--radius-lg);
+        overflow: hidden;
+        background: var(--sea-soft);
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+      .portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .portrait::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 8px;
+        background: var(--sun);
+      }
+      @media (max-width: 760px) {
+        .hero {
+          padding: 40px 0 32px;
+        }
+        .hero .wrap {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .portrait {
+          order: -1;
+          width: 132px;
+          border-radius: 66px 66px 16px 16px;
+        }
+      }
+
+      /* Sections */
+      section {
+        scroll-margin-top: 72px;
+      }
+      .section {
+        padding: 64px 0;
+        border-top: 1px solid var(--line);
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+      .section-head h2 {
+        font-size: clamp(1.9rem, 4vw, 2.6rem);
+        font-weight: 800;
+      }
+      .section-head p {
+        max-width: 52ch;
+        color: var(--muted);
+      }
+
+      /* Projects */
+      .projects {
+        display: grid;
+        gap: 20px;
+      }
+      .project {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        gap: 32px;
+        padding: 32px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+      }
+      .project-top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      .project h3 {
+        font-size: clamp(1.9rem, 4vw, 2.5rem);
+        font-weight: 800;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: var(--sea-soft);
+        color: var(--sea);
+      }
+      .tag.live {
+        background: var(--sun-soft);
+        color: var(--sun-ink);
+      }
+      .tag.live::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--sun);
+      }
+      .project .kind {
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+      .project .desc {
+        color: var(--text);
+        max-width: 60ch;
+      }
+      .stack {
+        margin-top: 18px;
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+      .stack strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .project-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+        padding-left: 32px;
+        border-left: 1px solid var(--line);
+      }
+      .highlights {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+      }
+      .highlights li {
+        position: relative;
+        padding-left: 22px;
+        font-size: 0.97rem;
+      }
+      .highlights li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 10px;
+        height: 2px;
+        background: var(--sea);
+      }
+      .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .note {
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      @media (max-width: 860px) {
+        .project {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 24px;
+        }
+        .project-side {
+          padding-left: 0;
+          border-left: 0;
+          padding-top: 24px;
+          border-top: 1px solid var(--line);
+        }
+      }
+
+      /* Stack */
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: var(--surface);
+      }
+      .skill {
+        padding: 24px;
+        border-right: 1px solid var(--line);
+      }
+      .skill:last-child {
+        border-right: 0;
+      }
+      .skill h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .skill p {
+        color: var(--text);
+        font-size: 0.97rem;
+      }
+      .skill .sub {
+        margin-top: 10px;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      @media (max-width: 900px) {
+        .skills {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .skill:nth-child(2n) {
+          border-right: 0;
+        }
+        .skill:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--line);
+        }
+      }
+      @media (max-width: 520px) {
+        .skills {
+          grid-template-columns: 1fr;
+        }
+        .skill {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+        .skill:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      /* Journey */
+      .journey {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+      }
+      .journey h3.col-title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .timeline {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-left: 2px solid var(--line);
+      }
+      .timeline li {
+        position: relative;
+        padding: 0 0 22px 22px;
+      }
+      .timeline li:last-child {
+        padding-bottom: 0;
+      }
+      .timeline li::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 7px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 2px solid var(--sea);
+      }
+      .timeline time {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .timeline strong {
+        display: block;
+        color: var(--ink);
+        font-weight: 600;
+        line-height: 1.35;
+        margin-top: 2px;
+      }
+      .timeline span {
+        font-size: 0.92rem;
+        color: var(--sea);
+        font-weight: 500;
+      }
+      @media (max-width: 760px) {
+        .journey {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+
+      /* Contact */
+      .contact {
+        background: var(--ink);
+        color: var(--bg);
+        border-radius: var(--radius-lg);
+        padding: clamp(32px, 6vw, 56px);
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 32px;
+        align-items: center;
+      }
+      .contact h2 {
+        color: var(--bg);
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 800;
+      }
+      .contact p {
+        margin-top: 12px;
+        color: color-mix(in srgb, var(--bg) 78%, transparent);
+        max-width: 46ch;
+      }
+      .contact-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 10px;
+      }
+      .contact-list a,
+      .contact-list div {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        border-radius: 14px;
+        background: color-mix(in srgb, var(--bg) 8%, transparent);
+        color: var(--bg);
+        text-decoration: none;
+        font-weight: 500;
+        overflow-wrap: anywhere;
+      }
+      .contact-list a:hover {
+        background: color-mix(in srgb, var(--bg) 16%, transparent);
+      }
+      .contact-list svg {
+        width: 20px;
+        height: 20px;
+        flex: none;
+        color: var(--sun);
+      }
+      .contact-list small {
+        display: block;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        font-weight: 400;
+      }
+      @media (prefers-color-scheme: dark) {
+        .contact {
+          background: var(--surface);
+          border: 1px solid var(--line);
+          color: var(--text);
+        }
+        .contact h2 {
+          color: var(--ink);
+        }
+        .contact p {
+          color: var(--muted);
+        }
+        .contact-list a,
+        .contact-list div {
+          background: var(--bg);
+          color: var(--ink);
+        }
+        .contact-list a:hover {
+          background: var(--sea-soft);
+        }
+      }
+      @media (max-width: 760px) {
+        .contact {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      footer {
+        padding: 32px 0 48px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      /* Floating WhatsApp */
+      .wa {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 40;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #1fa463;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 24px -8px rgba(15, 42, 58, 0.45);
+        transition: transform 0.15s;
+      }
+      .wa:hover {
+        transform: scale(1.06);
+      }
+      .wa svg {
+        width: 28px;
+        height: 28px;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
       }
     </style>
   </head>
-  <body
-    class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col selection:bg-brand-600 selection:text-white relative"
-  >
-    <a
-      href="https://wa.me/5585988877606"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full shadow-lg shadow-emerald-950/40 hover:scale-110 transition-all duration-350 animate-pulse"
-      title="Fale comigo no WhatsApp"
-    >
-      <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
+  <body>
+    <a class="skip" href="#projetos">Pular para os projetos</a>
 
-    <header
-      class="sticky top-0 z-50 backdrop-blur-md bg-[#0b0f19]/80 border-b border-slate-900"
-    >
-      <div
-        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <a href="#" class="font-extrabold text-xl tracking-tight gradient-text">
-          Jolivan.dev
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="#topo" aria-label="Jolivan Abreu, início">
+          <span class="brand-mark" aria-hidden="true">JA</span>
+          <span class="brand-name">Jolivan Abreu</span>
         </a>
-        <nav class="hidden md:flex gap-6 items-center">
-          <a
-            href="#about"
-            class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
-            >Sobre</a
-          >
-          <a
-            href="#skills"
-            class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
-            >Competências</a
-          >
-          <a
-            href="#projects"
-            class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
-            >Projetos</a
-          >
-          <a
-            href="#education"
-            class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
-            >Formação</a
-          >
-          <a
-            href="#contact"
-            class="px-5 py-2 text-xs font-bold rounded-lg bg-blue-600 hover:bg-blue-700 text-white transition-all shadow-md shadow-blue-500/10"
-            >Contacto</a
-          >
+        <nav class="nav" aria-label="Seções">
+          <a href="#projetos">Projetos</a>
+          <a href="#stack">Stack</a>
+          <a href="#formacao">Formação</a>
+          <a href="#contato">Contato</a>
         </nav>
       </div>
     </header>
 
-    <section
-      id="about"
-      class="max-w-6xl mx-auto px-6 py-16 md:py-28 flex flex-col-reverse md:flex-row items-center gap-12 w-full"
-    >
-      <div class="flex-1 space-y-6">
-        <div
-          class="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
-        >
-          <span class="relative flex h-2 w-2">
-            <span
-              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
-            ></span>
-            <span
-              class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"
-            ></span>
-          </span>
-          Disponível para novos projetos e desafios profissionais
-        </div>
-
-        <h1
-          class="text-4xl md:text-6xl font-black leading-tight tracking-tight"
-        >
-          Olá, eu sou <br />
-          <span class="gradient-text">Jolivan de Abreu Teixeira</span>
-        </h1>
-
-        <h2 class="text-lg md:text-xl font-bold text-slate-300">
-          Analista de Suporte Pleno | Desenvolvedor Full-Stack
-        </h2>
-
-        <p
-          class="text-slate-400 leading-relaxed text-sm md:text-base max-w-2xl"
-        >
-          Profissional com sólida atuação em infraestrutura corporativa, suporte
-          avançado e desenvolvimento de software. Especializado em projetar
-          soluções escaláveis com arquitetura limpa, utilizando ecossistemas
-          modernos como <strong>Node.js, React, Java, PHP e C#</strong>.
-          Experiente em padronização de ambientes com Docker e boas práticas de
-          Cybersecurity.
-        </p>
-
-        <div class="flex flex-wrap gap-4 pt-2">
-          <a
-            href="https://linkedin.com/in/jolivan-abreu-teixeira-5a27961b0"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-800 bg-[#111827]/40 hover:bg-[#111827] transition-all font-bold text-xs"
-          >
-            <i class="fab fa-linkedin text-blue-500 text-base"></i> LinkedIn
-          </a>
-          <a
-            href="https://github.com/JolivanAbreu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-800 bg-[#111827]/40 hover:bg-[#111827] transition-all font-bold text-xs"
-          >
-            <i class="fab fa-github text-base"></i> GitHub
-          </a>
-          <a
-            href="https://wa.me/5585988877606"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition-all shadow-lg shadow-blue-600/25"
-          >
-            <i class="fab fa-whatsapp"></i> Fale Comigo
-          </a>
-        </div>
-      </div>
-
-      <div class="relative shrink-0">
-        <div
-          class="absolute -inset-2 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-500 opacity-20 blur-xl"
-        ></div>
-        <div
-          class="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-900 shadow-2xl"
-        >
-          <img
-            src="img/Gemini_Generated_Image_x6w0emx6w0emx6w0.png"
-            alt="Jolivan Abreu Teixeira"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="skills"
-      class="bg-[#0e1626]/50 border-y border-slate-900 py-16 w-full gradient-glow"
-    >
-      <div class="max-w-6xl mx-auto px-6 space-y-8">
-        <div class="text-center md:text-left">
-          <span
-            class="text-xs font-black uppercase tracking-widest text-blue-500"
-            >Hard Skills</span
-          >
-          <h2 class="text-3xl font-extrabold tracking-tight mt-1">
-            Conhecimentos & Tecnologias
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div
-            class="p-6 rounded-2xl border border-slate-800/60 bg-[#0e1422] space-y-4 hover:border-blue-500/30 transition-colors"
-          >
-            <div class="flex items-center gap-2 text-blue-400">
-              <i class="fas fa-server"></i>
-              <h3
-                class="text-xs font-extrabold uppercase tracking-wider text-slate-400"
-              >
-                Backend & Bases de Dados
-              </h3>
-            </div>
-            <ul class="space-y-2">
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                Node.js (Sequelize) | Java | PHP | C#
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> SQL
-                (MariaDB, PostgreSQL, SQLite)
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                Modelagem Entidade-Relacionamento
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> APIs
-                RESTful & Docker Integration
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="p-6 rounded-2xl border border-slate-800/60 bg-[#0e1422] space-y-4 hover:border-blue-500/30 transition-colors"
-          >
-            <div class="flex items-center gap-2 text-blue-300">
-              <i class="fas fa-laptop-code"></i>
-              <h3
-                class="text-xs font-extrabold uppercase tracking-wider text-slate-400"
-              >
-                Frontend
-              </h3>
-            </div>
-            <ul class="space-y-2">
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> React
-                (Vite)
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                JavaScript (ES6+)
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                Tailwind CSS
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> HTML5
-                / CSS3
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="p-6 rounded-2xl border border-slate-800/60 bg-[#0e1422] space-y-4 hover:border-blue-500/30 transition-colors"
-          >
-            <div class="flex items-center gap-2 text-cyan-400">
-              <i class="fas fa-network-wired"></i>
-              <h3
-                class="text-xs font-extrabold uppercase tracking-wider text-slate-400"
-              >
-                Infraestrutura
-              </h3>
-            </div>
-            <ul class="space-y-2">
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
-                Administração Windows 10/11 Ent
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
-                Configuração de Políticas (GPO)
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
-                Gerenciamento de Serviços (ITIL 4)
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
-                Docker & Ambientes Isolados
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="p-6 rounded-2xl border border-slate-800/60 bg-[#0e1422] space-y-4 hover:border-blue-500/30 transition-colors"
-          >
-            <div class="flex items-center gap-2 text-teal-400">
-              <i class="fas fa-shield-halved"></i>
-              <h3
-                class="text-xs font-extrabold uppercase tracking-wider text-slate-400"
-              >
-                Segurança
-              </h3>
-            </div>
-            <ul class="space-y-2">
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
-                Cybersecurity (Cisco Academy)
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
-                Segurança de Redes
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
-                Autenticação Estrita (JWT)
-              </li>
-              <li class="flex items-center gap-2 text-sm text-slate-300">
-                <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
-                Compliance & Auditoria
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="projects"
-      class="max-w-6xl mx-auto px-6 py-20 space-y-12 w-full"
-    >
-      <div>
-        <span class="text-xs font-black uppercase tracking-widest text-blue-500"
-          >Portfólio</span
-        >
-        <h2 class="text-3xl font-extrabold tracking-tight mt-1">
-          Projetos em Destaque
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div
-          class="p-8 rounded-2xl border border-slate-850 bg-[#0e1422]/50 flex flex-col justify-between hover:border-blue-500/30 transition-all group shadow-md hover:shadow-lg hover:shadow-blue-900/5"
-        >
-          <div class="space-y-4">
-            <div class="flex justify-between items-start">
-              <span
-                class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-blue-500/10 text-blue-400 border border-blue-500/20"
-              >
-                Gestão & Vendas
-              </span>
-              <span class="text-slate-500 text-xs font-mono">Full Stack</span>
-            </div>
-            <h3
-              class="text-xl font-bold group-hover:text-blue-400 transition-colors"
-            >
-              SGV MEI
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Sistema completo para digitalizar e impulsionar
-              microempreendedores informais e do setor alimentício. Permite
-              cadastrar insumos, calcular preços de vendas precisos, gerar
-              relatórios de margens e dispor de uma vitrine virtual automática.
-            </p>
-            <div class="space-y-1.5 text-xs text-slate-500">
-              <p>
-                <strong>Destaques:</strong> Fichas técnicas de produtos, cálculo
-                de insumos, relatório de fluxo e vitrine pública.
-              </p>
-              <p>
-                <strong>Metodologia:</strong> Desenvolvido seguindo princípios
-                de <em>Lean Inception</em> para validação de dores reais.
-              </p>
-            </div>
-          </div>
-          <div class="pt-6 space-y-4">
-            <div class="flex flex-wrap gap-1.5">
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >React (Vite)</span
-              >
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >Tailwind CSS</span
-              >
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >NodeJS</span
-              >
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >Sequelize</span
-              >
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >MariaDB & Docker</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="p-8 rounded-2xl border border-slate-850 bg-[#0e1422]/50 flex flex-col justify-between hover:border-cyan-500/30 transition-all group shadow-md hover:shadow-lg hover:shadow-cyan-900/5"
-        >
-          <div class="space-y-4">
-            <div class="flex justify-between items-start">
-              <span
-                class="px-3 py-1 text-[10px] font-bold uppercase rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
-              >
-                Educação Financeira
-              </span>
-              <span class="text-slate-500 text-xs font-mono">Full Stack</span>
-            </div>
-            <h3
-              class="text-xl font-bold group-hover:text-cyan-400 transition-colors"
-            >
-              Meu Controle Financeiro
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Aplicação web inteligente voltada para a gestão de finanças
-              pessoais. Permite aos utilizadores o registo ágil de
-              receitas/despesas, elaboração de orçamentos mensais limitados,
-              definição de metas de curto/longo prazo e visualização via
-              gráficos dinâmicos.
-            </p>
-            <div class="space-y-1.5 text-xs text-slate-500">
-              <p>
-                <strong>Destaques:</strong> Gráficos interativos estruturados
-                com Recharts, controlo de despesas e alertas de orçamento.
-              </p>
-              <p>
-                <strong>Implementação:</strong> API REST modular isolada por
-                Docker facilitando a manutenção e escalabilidade.
-              </p>
-            </div>
-          </div>
-          <div class="pt-6 space-y-4">
-            <div class="flex flex-wrap gap-1.5">
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >React (Vite)</span
-              >
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >Recharts</span
-              >
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >NodeJS</span
-              >
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >JWT</span
-              >
-              <span
-                class="px-2.5 py-1 text-[10px] font-semibold bg-slate-900/80 text-slate-400 rounded"
-                >MariaDB & Docker</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="education"
-      class="bg-[#0e1626]/20 border-t border-slate-900 py-20 w-full"
-    >
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-        <div class="space-y-8">
+    <main id="topo">
+      <section class="hero">
+        <div class="wrap">
           <div>
-            <span
-              class="text-xs font-black uppercase tracking-widest text-blue-500"
-              >Jornada</span
-            >
-            <h2 class="text-2xl font-extrabold tracking-tight mt-1">
-              Formação Técnica & Acadêmica
-            </h2>
+            <h1>Jolivan Abreu</h1>
+            <p class="role">Desenvolvedor full-stack · Node.js e React</p>
+            <p class="lede">
+              Crio sistemas web para pequenos negócios e cuido de tudo: banco de dados, API, interface e
+              deploy. Hoje tenho um SaaS de agendamento em produção, dois e-commerces com pagamento
+              integrado e um sistema de comandas para restaurante.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+              <a class="btn" href="https://github.com/JolivanAbreu" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+                GitHub
+              </a>
+              <a class="btn" href="https://www.linkedin.com/in/jolivan-abreu-teixeira-5a27961b0/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+            <p class="status">Aberto a vagas de desenvolvedor full-stack ou back-end · Fortaleza, CE</p>
           </div>
-          <div class="border-l-2 border-slate-800 ml-4 pl-6 space-y-8">
-            <!-- Unifametro -->
-            <div class="relative">
-              <div
-                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-blue-500"
-              ></div>
-              <span class="text-xs text-slate-500 font-mono"
-                >Concluído em Junho de 2026</span
-              >
-              <h3 class="text-base font-bold text-slate-200 mt-1">
-                Tecnólogo em Análise e Desenvolvimento de Sistemas (ADS)
-              </h3>
-              <p class="text-xs text-blue-400 font-semibold">Unifametro</p>
-              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                Formação com foco prático em engenharia de requisitos,
-                arquitetura de sistemas e implementação de soluções com foco em
-                alta escalabilidade.
-              </p>
-            </div>
-
-            <!-- SENAI -->
-            <div class="relative">
-              <div
-                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-blue-500"
-              ></div>
-              <span class="text-xs text-slate-500 font-mono"
-                >Concluído em Nov de 2022</span
-              >
-              <h3 class="text-base font-bold text-slate-200 mt-1">
-                Técnico em Desenvolvimento de Sistemas
-              </h3>
-              <p class="text-xs text-blue-400 font-semibold">
-                SENAI - Serviço Nacional de Aprendizagem Industrial
-              </p>
-              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                Formação sólida em planeamento, modelagem de bases de dados
-                relacionais e análise minuciosa de requisitos do sistema.
-              </p>
-            </div>
+          <div class="portrait">
+            <img src="data:image/webp;base64,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" alt="Foto de Jolivan Abreu" width="260" height="325" />
           </div>
         </div>
+      </section>
 
-        <div class="space-y-8">
-          <div>
-            <span
-              class="text-xs font-black uppercase tracking-widest text-cyan-500"
-              >Qualificações</span
-            >
-            <h2 class="text-2xl font-extrabold tracking-tight mt-1">
-              Licenças & Certificações
-            </h2>
+      <section id="projetos" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Projetos</h2>
+            <p>
+              Sistemas feitos para negócios reais. O código é privado por serem projetos comerciais, mas
+              cada um tem uma página de detalhes no GitHub e, quando possível, uma demonstração aberta.
+            </p>
           </div>
-          <div class="border-l-2 border-slate-800 ml-4 pl-6 space-y-6">
-            <div class="relative">
-              <div
-                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-cyan-500"
-              ></div>
-              <span class="text-xs text-slate-500 font-mono"
-                >Março de 2026</span
-              >
-              <h3 class="text-sm font-bold text-slate-200 mt-1">
-                Introduction to Cybersecurity
-              </h3>
-              <p class="text-xs text-cyan-400 font-semibold">
-                Cisco Networking Academy
-              </p>
-              <p class="text-[11px] text-slate-500">
-                Competências adquiridas: Cibersegurança, Análise e Mitigação de
-                Riscos em Redes.
-              </p>
-            </div>
 
-            <div class="relative">
-              <div
-                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-cyan-500"
-              ></div>
-              <span class="text-xs text-slate-500 font-mono"
-                >Outubro de 2025</span
-              >
-              <h3 class="text-sm font-bold text-slate-200 mt-1">
-                Bootcamp Santander Cibersegurança 2025
-              </h3>
-              <p class="text-xs text-cyan-400 font-semibold">DIO</p>
-              <p class="text-[11px] text-slate-500">
-                Competências: Práticas de segurança ofensiva e defensiva
-                (Pentest), análise de vulnerabilidades, simulação de ataques
-                digitais e técnicas de pós-exploração.
-              </p>
-            </div>
+          <div class="projects">
+            <article class="project">
+              <div>
+                <div class="project-top">
+                  <h3>Belora</h3>
+                  <span class="tag live">Em produção</span>
+                </div>
+                <p class="kind">Agendamento online para profissionais de estética</p>
+                <p class="desc">
+                  SaaS multi-tenant que substitui a marcação por WhatsApp: a profissional gerencia a
+                  agenda em um painel e as clientes marcam horário sozinhas por um link público, sem
+                  precisar de cadastro.
+                </p>
+                <p class="stack"><strong>Stack:</strong> Node.js, Express, PostgreSQL, Sequelize, React, Tailwind, Docker, Jest</p>
+              </div>
+              <div class="project-side">
+                <ul class="highlights">
+                  <li>Dados de cada estabelecimento isolados por tenant, resolvido pelo token ou pela URL</li>
+                  <li>Sem conflito de horário mesmo com reservas simultâneas, usando advisory lock no PostgreSQL</li>
+                  <li>Confirmação e lembretes automáticos por WhatsApp 24h, 2h e 30min antes</li>
+                  <li>Login do painel com verificação em duas etapas (2FA)</li>
+                </ul>
+                <div>
+                  <div class="project-links">
+                    <a class="btn" href="https://github.com/JolivanAbreu/belora-showcase" target="_blank" rel="noopener noreferrer">Ver detalhes</a>
+                  </div>
+                  <p class="note" style="margin-top: 10px">Demonstração disponível mediante solicitação.</p>
+                </div>
+              </div>
+            </article>
 
-            <div class="relative">
-              <div
-                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-cyan-500"
-              ></div>
-              <span class="text-xs text-slate-500 font-mono"
-                >Agosto de 2025</span
-              >
-              <h3 class="text-sm font-bold text-slate-200 mt-1">
-                Administração do Windows 10 Enterprise
-              </h3>
-              <p class="text-xs text-cyan-400 font-semibold">
-                Lanlink Informática
-              </p>
-              <p class="text-[11px] text-slate-500">
-                Competências: Configuração avançada de Políticas de Grupo (GPO)
-                e gestão local do sistema operacional.
-              </p>
-            </div>
+            <article class="project">
+              <div>
+                <div class="project-top">
+                  <h3>DropeLab</h3>
+                  <span class="tag">Demo pública</span>
+                </div>
+                <p class="kind">E-commerce de streetwear oversized</p>
+                <p class="desc">
+                  Loja virtual, painel administrativo e API para uma marca de roupas, com pagamento por
+                  cartão e Pix. O projeto partiu de uma documentação técnica própria: requisitos,
+                  modelo de dados, API, testes e LGPD.
+                </p>
+                <p class="stack"><strong>Stack:</strong> Node.js, Express, PostgreSQL, Sequelize, React, Tailwind, Mercado Pago, Jest, Sentry</p>
+              </div>
+              <div class="project-side">
+                <ul class="highlights">
+                  <li>Cartão tokenizado no navegador: o servidor nunca recebe os dados do cartão</li>
+                  <li>Webhook com assinatura validada e status sempre confirmado no Mercado Pago</li>
+                  <li>Estoque reservado no momento do pedido e liberado automaticamente se o pagamento não sair</li>
+                  <li>Perfis de administrador e operador com permissões aplicadas na API</li>
+                </ul>
+                <div class="project-links">
+                  <a class="btn btn-primary" href="https://drope-lab.vercel.app" target="_blank" rel="noopener noreferrer">Abrir a loja</a>
+                  <a class="btn" href="https://github.com/JolivanAbreu/dropelab-showcase" target="_blank" rel="noopener noreferrer">Ver detalhes</a>
+                </div>
+              </div>
+            </article>
 
-            <div class="relative">
-              <div
-                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-cyan-500"
-              ></div>
-              <span class="text-xs text-slate-500 font-mono"
-                >Julho de 2025</span
-              >
-              <h3 class="text-sm font-bold text-slate-200 mt-1">
-                Conceitos Fundamentais ITIL 4
-              </h3>
-              <p class="text-xs text-cyan-400 font-semibold">
-                Lanlink Informática
-              </p>
-              <p class="text-[11px] text-slate-500">
-                Competências: Gerenciamento profissional e estruturado de
-                serviços de TI (ITSM).
-              </p>
-            </div>
+            <article class="project">
+              <div>
+                <div class="project-top">
+                  <h3>ROTA</h3>
+                  <span class="tag">Demo pública</span>
+                </div>
+                <p class="kind">E-commerce de moda fitness lifestyle</p>
+                <p class="desc">
+                  Loja própria da marca, com linha lifestyle organizada por ocasião, conta da cliente e
+                  painel de gestão. O checkout e o pagamento acontecem na Nuvemshop, integrada por API e
+                  webhooks.
+                </p>
+                <p class="stack"><strong>Stack:</strong> Node.js, Express, PostgreSQL, Sequelize, Zod, React, Vite, Tailwind, Sentry</p>
+              </div>
+              <div class="project-side">
+                <ul class="highlights">
+                  <li>Produtos, variações e estoque editados no painel e sincronizados com a Nuvemshop ao salvar</li>
+                  <li>Pedido marcado como pago automaticamente quando a Nuvemshop confirma o pagamento</li>
+                  <li>Envio com código de rastreio pelo painel, avisando a cliente pela Nuvemshop</li>
+                  <li>Catálogo com filtros por categoria, ocasião e tamanho</li>
+                </ul>
+                <div class="project-links">
+                  <a class="btn btn-primary" href="https://rota-ecommerce.vercel.app" target="_blank" rel="noopener noreferrer">Abrir a loja</a>
+                  <a class="btn" href="https://github.com/JolivanAbreu/rota-ecommerce-showcase" target="_blank" rel="noopener noreferrer">Ver detalhes</a>
+                </div>
+              </div>
+            </article>
 
-            <div class="relative">
-              <div
-                class="absolute -left-[32px] top-1.5 w-3 h-3 rounded-full bg-[#0b0f19] border-2 border-cyan-500"
-              ></div>
-              <span class="text-xs text-slate-500 font-mono"
-                >Julho de 2025</span
-              >
-              <h3 class="text-sm font-bold text-slate-200 mt-1">
-                Compliance, Antisuborno & Segurança da Informação
-              </h3>
-              <p class="text-xs text-cyan-400 font-semibold">
-                Lanlink Informática
-              </p>
+            <article class="project">
+              <div>
+                <div class="project-top">
+                  <h3>Casa do Norte</h3>
+                  <span class="tag">Demo pública</span>
+                </div>
+                <p class="kind">Comandas para restaurante com mercearia</p>
+                <p class="desc">
+                  Sistema feito para o salão de um restaurante que funciona junto de uma mercearia de
+                  produtos regionais. Reúne comandas, mesas, cardápio e mercearia em um só lugar.
+                </p>
+                <p class="stack"><strong>Stack:</strong> Node.js, Express, MySQL, Sequelize, React, Vite, Tailwind, Mercado Pago</p>
+              </div>
+              <div class="project-side">
+                <ul class="highlights">
+                  <li>Comandas de mesa, delivery e retirada na mesma tela, com controle de mesas livres e ocupadas</li>
+                  <li>Produtos vendidos por unidade ou por quilo, com baixa automática no estoque</li>
+                  <li>Comprovante pronto para impressora térmica de 80mm</li>
+                  <li>Relatórios por dia, semana, mês e ano, comparando salão e delivery</li>
+                </ul>
+                <div>
+                  <div class="project-links">
+                    <a class="btn btn-primary" href="https://north-house-two.vercel.app" target="_blank" rel="noopener noreferrer">Abrir a demo</a>
+                    <a class="btn" href="https://github.com/JolivanAbreu/north-house-showcase" target="_blank" rel="noopener noreferrer">Ver detalhes</a>
+                  </div>
+                  <p class="note" style="margin-top: 10px">O acesso de demonstração aparece na tela de login.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Stack</h2>
+            <p>As ferramentas que uso no dia a dia, do banco de dados ao deploy.</p>
+          </div>
+          <div class="skills">
+            <div class="skill">
+              <h3>Back-end</h3>
+              <p>Node.js, Express, Sequelize, APIs REST, autenticação JWT e 2FA, testes com Jest</p>
+            </div>
+            <div class="skill">
+              <h3>Front-end</h3>
+              <p>React, Vite, JavaScript, Tailwind CSS, HTML e CSS</p>
+            </div>
+            <div class="skill">
+              <h3>Dados e deploy</h3>
+              <p>PostgreSQL, MySQL e MariaDB, modelagem relacional, Docker, Railway, Vercel, Git</p>
+            </div>
+            <div class="skill">
+              <h3>Integrações</h3>
+              <p>Mercado Pago (cartão e Pix), Nuvemshop, envio de mensagens por WhatsApp, e-mail SMTP</p>
+              <p class="sub">Também já trabalhei com Java, C#, PHP e Python.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section
-      id="contact"
-      class="max-w-4xl mx-auto px-6 py-20 w-full space-y-12"
-    >
-      <div class="text-center space-y-2">
-        <span class="text-xs font-black uppercase tracking-widest text-blue-500"
-          >Contacto</span
-        >
-        <h2 class="text-3xl font-extrabold tracking-tight">
-          Vamos Conversar?
-        </h2>
-        <p class="text-slate-400 text-sm max-w-lg mx-auto">
-          Estou à disposição para colaborar no desenvolvimento de aplicações
-          modernas, suporte técnico especializado e na melhoria da
-          infraestrutura de TI.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 pt-6 text-center">
-        <div
-          class="p-6 rounded-2xl border border-slate-900 bg-[#0e1422]/30 space-y-2 hover:border-blue-500/20 transition-colors"
-        >
-          <i class="fas fa-envelope text-blue-500 text-lg"></i>
-          <span
-            class="block text-xs font-bold text-slate-400 uppercase tracking-wider"
-            >E-mail</span
-          >
-          <a
-            href="mailto:jolivan.abreu@outlook.com"
-            class="text-sm text-slate-200 hover:underline"
-            >jolivanteixeiraempregos@gmail.com</a
-          >
+      <section id="formacao" class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Formação</h2>
+            <p>
+              Também atuo com suporte de TI, uma experiência que me ensinou a ouvir o usuário e a
+              resolver problemas sob pressão.
+            </p>
+          </div>
+          <div class="journey">
+            <div>
+              <h3 class="col-title">Acadêmica</h3>
+              <ol class="timeline">
+                <li>
+                  <time datetime="2026-06">Junho de 2026</time>
+                  <strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong>
+                  <span>UNIFAMETRO</span>
+                </li>
+                <li>
+                  <time datetime="2022-11">Novembro de 2022</time>
+                  <strong>Técnico em Desenvolvimento de Sistemas</strong>
+                  <span>SENAI</span>
+                </li>
+              </ol>
+            </div>
+            <div>
+              <h3 class="col-title">Certificações</h3>
+              <ol class="timeline">
+                <li>
+                  <time datetime="2026-03">Março de 2026</time>
+                  <strong>Introduction to Cybersecurity</strong>
+                  <span>Cisco Networking Academy</span>
+                </li>
+                <li>
+                  <time datetime="2025-10">Outubro de 2025</time>
+                  <strong>Bootcamp Santander Cibersegurança 2025</strong>
+                  <span>DIO</span>
+                </li>
+                <li>
+                  <time datetime="2025-08">Agosto de 2025</time>
+                  <strong>Administração do Windows 10 Enterprise</strong>
+                  <span>Lanlink Informática</span>
+                </li>
+                <li>
+                  <time datetime="2025-07">Julho de 2025</time>
+                  <strong>Fundamentos de ITIL 4</strong>
+                  <span>Lanlink Informática</span>
+                </li>
+                <li>
+                  <time datetime="2025-07">Julho de 2025</time>
+                  <strong>Compliance, Antissuborno e Segurança da Informação</strong>
+                  <span>Lanlink Informática</span>
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div
-          class="p-6 rounded-2xl border border-slate-900 bg-[#0e1422]/30 space-y-2 hover:border-blue-500/20 transition-colors"
-        >
-          <i class="fas fa-map-location-dot text-blue-500 text-lg"></i>
-          <span
-            class="block text-xs font-bold text-slate-400 uppercase tracking-wider"
-            >Localização</span
-          >
-          <span class="block text-sm text-slate-200">Fortaleza, Ceará</span>
+      <section id="contato" class="section">
+        <div class="wrap">
+          <div class="contact">
+            <div>
+              <h2>Vamos conversar</h2>
+              <p>
+                Procuro uma vaga como desenvolvedor full-stack ou back-end. Também aceito projetos sob
+                medida para pequenos negócios.
+              </p>
+            </div>
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:jolivanteixeiraempregos@gmail.com">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                  <span><small>E-mail</small>jolivanteixeiraempregos@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/5585988877606" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35ZM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 1 1 7.98 4.41ZM20.05 3.95A11.3 11.3 0 0 0 2.27 17.58L.66 23.5l6.06-1.59a11.3 11.3 0 0 0 5.33 1.36h.01A11.3 11.3 0 0 0 20.05 3.95Z"/></svg>
+                  <span><small>WhatsApp</small>(85) 98887-7606</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/jolivan-abreu-teixeira-5a27961b0/" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+                  <span><small>LinkedIn</small>jolivan-abreu-teixeira</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/JolivanAbreu" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+                  <span><small>GitHub</small>JolivanAbreu</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div
-          class="p-6 rounded-2xl border border-slate-900 bg-[#0e1422]/30 space-y-2 hover:border-blue-500/20 transition-colors"
-        >
-          <i class="fab fa-linkedin text-blue-500 text-lg"></i>
-          <span
-            class="block text-xs font-bold text-slate-400 uppercase tracking-wider"
-            >LinkedIn</span
-          >
-          <a
-            href="https://linkedin.com/in/jolivan-abreu-teixeira-5a27961b0"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-sm text-slate-200 hover:underline"
-            >jolivan-abreu-teixeira</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <footer
-      class="mt-auto border-t border-slate-900 bg-[#070a12] py-8 text-center text-xs text-slate-500"
-    >
-      <div
-        class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4"
-      >
-        <p>
-          &copy; 2026 - Jolivan Abreu Teixeira. Todos os direitos reservados.
-        </p>
-        <p class="text-[10px]">
-          Desenvolvido profissionalmente com HTML5, Tailwind CSS & FontAwesome.
-        </p>
+    <footer>
+      <div class="wrap">
+        <p>© 2026 Jolivan Abreu Teixeira</p>
+        <p>Fortaleza, Ceará</p>
       </div>
     </footer>
+
+    <a class="wa" href="https://wa.me/5585988877606" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35ZM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.4 9.4 0 1 1 7.98 4.41ZM20.05 3.95A11.3 11.3 0 0 0 2.27 17.58L.66 23.5l6.06-1.59a11.3 11.3 0 0 0 5.33 1.36h.01A11.3 11.3 0 0 0 20.05 3.95Z"/></svg>
+    </a>
   </body>
 </html>
